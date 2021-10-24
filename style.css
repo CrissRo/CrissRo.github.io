@@ -1,0 +1,103 @@
+
+body{
+    background-image:url(images/IMG_20211024_191211.png) ;
+    background-size: 100%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10%;
+}
+
+header{
+    color: hsl(240, 100%, 50%);
+    text-align: center;
+    font-family: Horror,'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+    text-shadow: 0.3rem 0.3rem 0.1rem hsl(240, 100%, 13%);
+    word-spacing: 1rem;
+    animation-name: header_animation;
+    animation-duration: 2s;
+    animation-direction: normal;
+}
+
+.section1{
+    background-color: hsla(0, 0%, 52%, 0.8);
+    border: solid hsl(0, 0%, 0%) 0.1rem;
+    color: hsl(240, 100%, 17%);
+    box-shadow: 0.1rem 0.1rem 0.1rem hsl(240, 100%, 10%),
+                0.1rem 0.1rem 0.1rem hsl(240, 100%, 17%),
+                0.1rem 0.1rem 0.1rem hsl(240, 100%, 25%),
+                0.1rem 0.1rem 0.1rem hsl(0, 0%, 0%);
+    z-index: 10;
+}
+
+button{
+    background-color: hsl(240, 82%, 33%);
+    color: hsl(199, 65%, 42%);
+    margin-left: 60%;
+}
+button:focus
+{
+    transform: scale(1.1);
+}
+#candel{
+    width: 4rem;
+    position: absolute;
+    bottom: 0;
+    float: left;
+    z-index: 1;
+    animation-name: candels_animation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+#candel_2{
+    width: 4rem;
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    z-index: 1;
+    animation-name: candels_animation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+marquee{
+    color:hsl(236, 77%, 40%);
+}
+
+*::selection{
+    color: blue;
+}
+
+@font-face {
+    font-family: Horror;
+    src: url(fonts/whoaskssatan.ttf);
+}
+
+@keyframes candels_animation {
+    0%{filter: saturate(0%);}
+    100%{filter: saturate(100%);}
+}
+
+@keyframes header_animation {
+    0%{filter: opacity(0%);}
+    70%{filter: opacity(100%);}
+    75%{transform: translateX(2px);}
+    80%{transform: translateY(5px);}
+    85%{transform: translateX(-7x);}
+    90%{transform: translateX(-3px);}
+    98%{transform: translateY(-18px);}
+    99%{transform: translatey(8px);}
+    100%{transform: translateX(-11px);}
+}
